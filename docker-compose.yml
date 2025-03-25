@@ -11,8 +11,8 @@ services:
     volumes:
       - ./logs/host-fs-auditlog.log:/var/log/modsec_audit.log
       - ./logs/host-fs-errorlog.log:/var/log/modsec_error.log
-      - ./ssl/epay.crt:/etc/nginx/conf/server.crt
-      - ./ssl/epay.key:/etc/nginx/conf/server.key
+      - ./ssl/server.crt:/etc/nginx/conf/server.crt
+      - ./ssl/server.key:/etc/nginx/conf/server.key
     environment:
       SERVER_TOKENS: "off"
       MODSEC_AUDIT_ENGINE: "on"
